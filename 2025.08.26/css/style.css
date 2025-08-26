@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+ul{
+    display: flex;
+    list-style: none;
+    /* flexが入っている時のみ有効 */
+    justify-content: center;
+    gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    ul{
+        flex-direction: column;
+    }
+}
