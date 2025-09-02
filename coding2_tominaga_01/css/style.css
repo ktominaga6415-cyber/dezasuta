@@ -53,6 +53,11 @@ ul li:not(:last-child){
         align-items: flex-start;
         margin: 50px 30px; 
     }
+
+    nav{
+        width: 100%;/* ナビを100%にしてul以下の下線の長さに反映 */
+    }
+
     ul{
         flex-direction: column;
     }
@@ -68,7 +73,7 @@ ul li:not(:last-child){
 
     ul li{
         border-bottom: 1px solid black;
-        width: 300%;
+        /* width: 300%; width300%という書き方は通常しない */
         padding-bottom: 10px;
     }
 }
