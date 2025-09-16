@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+body {
+    background-color: #e8d9bf;
+}
+
+/* ====================================
+// ヘッダー
+// ==================================== */
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 145/1920=0.0755 */
+    padding-right: 7.6%;
+    /* 56/1920=0.029 */
+    padding-left: 2.9%;
+    position: absolute;
+    width: 100%;
+}
+
+.header_nav ul{
+    display: flex;
+    gap: 75px;
+    /* 75 ÷ 1920 = 0.0391 */
+    /* gap: 3.9%; */ 
+}
+
+.header_nav a{
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium","Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo{
+    width: 227px;
+}
+
+/* ====================================
+// メイン
+// ==================================== */
+/* ====================================
+// キャッチコピー
+// ==================================== */
+.catch_copy {
+    max-width: 1020px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
+} 
+
+.upper_catch {
+    font-size: 30px;
+    line-height: 3.89;
+    letter-spacing: 0em;
+    margin-top: 105px;
+    margin-bottom: 48px;
+}
+
+ .main_catch {
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    margin-bottom: 42px;
+}
+
+.lower_catch {
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+    margin-bottom: 94px;
+}
+
+/* ====================================
+// ABOUT US
+// ==================================== */
+.about_us {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 78px;
+    /* 78 ÷ 1020 =0.0764 */
+    /* gap: 7.6%; */
+}
+
+.image_about_us {
+    width: 500px;
+    height: 560px;
+}
+
+.image_about_us img {
+    width: 100%;
+    height: auto;
+    /* 82 ÷ 500 / 82 ÷ 560 */
+    border-radius: 0 0 16.4% 0 / 0 0 14.6% 0;
+    /* border-radius: 0 0 82px 0; */
+}
+
+.all_text_about_us {
+    /* 500 - 78 = 422 */
+    width: 422px;
+} 
+
+.title_about_us {
+    margin-top: 57px;
+    margin-bottom: 48px;
+}
+
+.heading_h2 img {
+    height: 77px;
+    width: auto;
+}
+
+.catch_about_us {
+    font-size: 44px;
+    line-height: 1.39;
+    letter-spacing: 0em;
+    margin-bottom: 22px;
+}
+
+.text_about_us {
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0em;
+    text-align: justify;
+}
+
+/* ====================================
+// MENU
+// ==================================== */
+.menu {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title_menu {
+    text-align: center;
+    margin-top: 96px;
+    margin-bottom: 39px;
+}
+
+.list_menu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    /* 50 ÷ 1020 = 0.0490 */
+    /* gap: 4.9%; */
+}
+
+.list_menu li {
+    width: 300px;
+    height: 314px;
+    /* height: auto; */
+    position: relative;
+}
+
+
+.list_menu li img {
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 300 / 200; */
+    /* 42 ÷ 300 = 14 / 42 ÷ 200 = 21 */
+    border-radius: 0 14% 0 0 / 0 21% 0 0 ;
+    /* border-radius: 0 42px 0 0; */
+}
+
+.list_menu li div {
+    width: 100%;
+    height: auto;
+    /* aspect-ratio: 300 / 114; */
+    position: absolute;
+}
+
+.heading_h3 {
+    font-size: 38px;
+    font-weight: lighter;
+    color: #d30202;
+    margin-top: -12px;
+    padding-left: 14px;
+    margin-bottom: 8px;
+}
+
+.text_menu {
+    line-height: 1.47;
+    letter-spacing: 0em;
+    width: 100%;
+    height: auto;
+    text-align: justify;
+}
+
+.title_gallery {
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 15px;
+}
+
+.list_gallery {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+/* ====================================
+// EVENT
+// ==================================== */
+.event {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+ .title_event {
+    text-align: center;
+    margin-top: 59px;
+    margin-bottom: 29px;
+ }
+
+ .box_event {
+    background-color: #fff;
+    border: 4px solid #4f260b;
+    width: 100%;
+    height: 200px;
+    /* 162 ÷ 1000 = 0.162 */
+    padding: 0 0 0 16.2% ;
+ }
+
+ .list_event {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item_list_event {
+    display: flex;
+    font-size: 23px;
+    line-height: 1.96;
+    letter-spacing: 0em;
+    gap: 56px;
+}
+
+.underline_link {
+    text-decoration: underline;
+}
+
+/* ====================================
+// ACCESS
+// ==================================== */
+.title_access {
+    text-align: center;
+    margin-top: 68px;
+    margin-bottom: 35px;
+}
+
+.map {
+    filter: grayscale(100%) invert(92%) contrast(83%);
+}
+
+/* ====================================
+// フッター
+// ==================================== */
+footer {
+    background-color: #fff;
+}
+
+.footer_container {
+    display: flex;  
+    max-width: 1020px;
+    padding: 83px 10px 0; 
+    margin: 0 auto;
+    gap: 65px;
+}
+
+.logo_footer {
+    width: 227px;
+    transform: translateY(-7px);
+}
+
+.corporate_info p:not(:last-child) {
+    font-size: 20px;
+    line-height: 1.95;
+    letter-spacing: 0em;
+    margin-bottom: 14px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 16px;
+    line-height: 2.19;
+    letter-spacing: 0em;
+    padding-top: 74px;
+    padding-bottom: 74px;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 125px;
+}
