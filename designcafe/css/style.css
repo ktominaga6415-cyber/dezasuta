@@ -23,11 +23,16 @@ body {
     width: 100%;
 }
 
+.header_nav {
+    max-width: 720px;
+    width: 100%;
+}
+
 .header_nav ul{
     display: flex;
-    /* gap: 75px; */
+    gap: 75px;
     /* 75 ÷ 1920 = 0.0391 */
-    gap: 3.9%; 
+    /* gap: 3.9%; */
     /* 75 ÷ 1000 = 0.075 */
     /* gap: 7.5%; */
     /* 75 / 720（ABOUA US からACCESSまでの幅） = 0.104 */
@@ -158,15 +163,17 @@ body {
 
 .list_menu {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
     /* gap: 50px; */
     /* 50 ÷ 1020 = 0.0490 */
-    gap: 4.9%;
+    /* gap: 4.9%; */
 }
 
 .list_menu li {
-    width: 300px;
-    height: 314px;
+    width: 30%;
+    /* width: 300px; */
+    /* height: 314px; */
     /* height: auto; */
     position: relative;
 }
@@ -205,6 +212,9 @@ body {
     text-align: justify;
 }
 
+/* ====================================
+// GALLERY
+// ==================================== */
 .title_gallery {
     text-align: center;
     margin-top: 85px;
