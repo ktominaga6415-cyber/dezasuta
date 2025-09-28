@@ -30,8 +30,26 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <span></span>
+        </div>
+        <nav class="header_nav-sp">
+            <ul>
+                <li><a href="#about_us">ABOUT US</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#access">ACCESS</a></li>                
+            </ul>
+        </nav>
         <div class="mainvisual">
-            <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+            <picture>
+                <source
+                    srcset="./images/sp_main_vs@2x-100.jpg"
+                    media="(max-width:768px)"
+                />
+                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+            </picture>
         </div>
     </header>
 
@@ -51,6 +69,12 @@
             <p class="lower_catch">
                 毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
                 足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+            </p>
+            <p class="lower_catch-sp">
+                毎日を丁寧に大切に過ごしたい。<br>
+                だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+                足を運んでくれるお客さんには落ち着く空間と<br>
+                こだわりのコーヒーを提供したい。
             </p>
         </div>
 <!-- ====================================
@@ -75,6 +99,30 @@
                 </p>
             </div>
         </section>
+
+        <section id="about_us-sp" class="about_us-sp">
+            <div class="title_about_us-sp">
+                <h2 class="heading_h2">
+                    <img src="./images/about_us@2x.png" alt="ABOUT US">
+                </h2>
+            </div>
+            <div class="image_about_us-sp">
+                <img src="images/about_us@2x-100.jpg" alt="コーヒーで乾杯する光景">
+            </div>
+            <div class="all_text_about_us-sp">
+                <p class="catch_about_us-sp">
+                    私たちが提供する<br>
+                    こだわりのコーヒー
+                </p>
+                <p class="text_about_us-sp">
+                    サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。
+                </p>
+            </div>
+        </section>
+
+<!-- ====================================
+//// MENU
+//// ==================================== -->
         <section id="menu" class="menu">
             <div class="title_menu">
                 <h2 class="heading_h2">
@@ -82,9 +130,6 @@
                 </h2>
             </div>
 
-<!-- ====================================
-//// MENU
-//// ==================================== -->
             <ul class="list_menu">
                 <li>
                     <img src="./images/drink_sp@2x-100.jpg" alt="Drinkの写真">
@@ -211,5 +256,18 @@
             </a>
         </p>
     </footer>
+    
+<!-- ====================================
+//// Java Svript
+//// ==================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".hamburger").click(function() {
+                $(".hamburger").toggleClass("open");
+                $(".header_nav-sp").fadeToggle();
+            });
+        });
+    </script>
 </body>
 </html>
