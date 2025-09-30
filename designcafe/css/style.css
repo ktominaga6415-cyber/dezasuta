@@ -214,7 +214,9 @@ body {
     }
 
     .main_catch {
-        font-size: 38px;
+        /* font-size: 38px; */
+        /* 大きい文字限定で、vwを使うと画面幅に応じて余白とってくれながらフォントサイズを縮小できる */
+        font-size: 9.4vw;
         line-height: 1.16;
         letter-spacing: 0.02em;
         /* 24-3-7=14 */
@@ -563,7 +565,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        max-width: 392px;
+        /* max-width: 392px; */
         margin: 0 auto;
         padding: 0 20px;
     }
