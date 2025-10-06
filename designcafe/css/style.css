@@ -535,7 +535,7 @@ body {
     display: none;
 }
 
-/* slick-dots の各要素 (li要素) */
+/* slick-dotsクラス（初期設定）の中で、ドットが2段になる問題を解決するために幅を調整 */
 .slick-dots li {
     width: 20px;
 }
