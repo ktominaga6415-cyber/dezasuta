@@ -2,10 +2,12 @@
 
 html {
     scroll-behavior: smooth;
+    /* position: relative; */
 }
 
 body {
     background-color: #e8d9bf;
+    /* position: relative; */
 }
 
 /* ====================================
@@ -22,6 +24,8 @@ body {
     padding-left: 2.9%;
     position: absolute;
     width: 100%;
+    /* slickスライダーを入れるとナビが後ろ側に回ってしまうため、表示順を上げる */
+    z-index: 9999;
 }
 
 .header_nav {
@@ -139,6 +143,23 @@ body {
         color: #fff;
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium","Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     }
+}
+
+.slick-dots {
+    bottom: 0;
+}
+
+.slick-dots li button:before {
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #fff;
+}
+
+/* 一瞬縦並びになるのを防ぐため、JSが読み込まれるまでは１枚目のみを表示 */
+.mainvisual > picture:not(:first-child) {
+    display: none;
 }
 
 @media screen and (max-width: 1100px) {
@@ -487,9 +508,31 @@ body {
     margin: 0 auto;
     width: 100%;
     height: auto;
+    /* color: #fff; */
 }
+
+/* モーダルウィンドウで表示されるタイトルの色を変更 */
+/* 初期設定ではリセットCSSの#4f260bが設定されている */
+/* lb-captionは読み込んだlightbox.min.cssの中で設定されているCSS */
+/* lightbox.min.cssは可読性が低いため、実際には読み込んでないがlightbox.cssを参照するとわかりやすい*/
+.lb-caption {
+    color: #fff;
+}
+
+/* .hover::after {
+    content: attr(data-title);
+    color: #fff;
+} */
+
 .list_gallery li {
     width: 20%;
+    /* color: #fff; */
+}
+
+/* 一瞬縦並びになるのを防ぐため、JSが読み込まれるまでは５枚のみを表示 */
+/* ※スライダーは６枚設定して初めて画面サイズぴったりの５枚表示のスラオイダー機能が有効になる */
+.list_gallery > li:last-child {
+    display: none;
 }
 
 @media screen and (max-width: 768px) {

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <!-- slick読み込み -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- モーダルウィンドウ（lightbox）読み込み -->
+    <link rel="stylesheet" href="./css/lightbox.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -48,7 +53,14 @@
                     srcset="./images/sp_main_vs@2x-100.jpg"
                     media="(max-width:768px)"
                 />
-                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子">
+                <img src="./images/pc_first-100.jpg" alt="カフェ店内の様子1">
+            </picture>
+            <picture>
+                <source
+                    srcset="./images/sp_main_vs_2@2x-100.jpg"
+                    media="(max-width:768px)"
+                />
+                <img src="./images/slider_2.jpg" alt="カフェ店内の様子2">
             </picture>
         </div>
     </header>
@@ -158,29 +170,44 @@
 <!-- ====================================
 //// GALLERY
 //// ==================================== -->
-        <section id="gallery" class="gallery">
+        <section id="gallery" class="gallery" style="color: #fff;">
             <div class="title_gallery">
                 <h2 class="heading_h2">
                     <img src="./images/gallery@2x.png" alt="GALLERY">
                 </h2>
             </div>
-            <ul class="list_gallery">
+            <ul class="list_gallery" style="color: #fff;">
                 <li>
-                    <img src="./images/pc_gallary_05-100.jpg" alt="GALLERY写真1">
+                    <a class="hover" href="images/pc_gallary_05-100.jpg" data-lightbox="gallery-group" style="color: #fff;" data-title="ギャラリー写真1" data-alt="ギャラリー写真1">
+                        <img src="./images/pc_gallary_05-100.jpg" alt="ギャラリー写真1">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/pc_gallary_04-100.jpg" alt="GALLERY写真2">
+                    <a href="images/pc_gallary_04-100.jpg" data-lightbox="gallery-group" data-title="ギャラリー写真2" data-alt="ギャラリー写真2">
+                        <img src="./images/pc_gallary_04-100.jpg" alt="ギャラリー写真2">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/pc_gallary_03-100.jpg" alt="GALLERY写真3">
+                    <a href="images/pc_gallary_03-100.jpg" data-lightbox="gallery-group" data-title="ギャラリー写真3" data-alt="ギャラリー写真3">
+                        <img src="./images/pc_gallary_03-100.jpg" alt="ギャラリー写真3">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/pc_gallary_02-100.jpg" alt="GALLERY写真4">
+                    <a href="images/pc_gallary_02-100.jpg" data-lightbox="gallery-group" data-title="ギャラリー写真4" data-alt="ギャラリー写真4">
+                        <img src="./images/pc_gallary_02-100.jpg" alt="ギャラリー写真4">
+                    </a>
                 </li>
                 <li>
-                    <img src="./images/pc_gallary_01-100.jpg" alt="GALLERY写真5">
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery-group" data-title="ギャラリー写真5" data-alt="ギャラリー写真5">
+                        <img src="./images/pc_gallary_01-100.jpg" alt="ギャラリー写真5">
+                    </a>
+                </li>
+                <li>
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery-group" data-title="ギャラリー写真5" data-alt="ギャラリー写真5"></a>
+                    <img src="./images/pc_gallary_01-100.jpg" alt="ギャラリー写真5">
                 </li>
             </ul>
+            <a href=></a>
         </section>
 
 <!-- ====================================
@@ -261,13 +288,44 @@
 //// Java Svript
 //// ==================================== -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/lightbox.min.js"></script>
     <script>
         $(function() {
             $(".hamburger").click(function() {
                 $(".hamburger").toggleClass("open");
                 $(".header_nav-sp").fadeToggle();
             });
+            // slick
+            $(".mainvisual").slick({
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true
+            });
+            $(".list_gallery").slick({
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                // dots: true,
+                slidesToShow: 5,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }]
+            });
         });
+        lightbox.option({
+            'fadeDuration': 300,
+            'imageFadeDuration': 300,
+            'resizeDuration': 300,
+            'alwaysShowNavOnTouchDevices': true,
+            'wrapAround': true,
+            'showImageNumberLabel': false
+        })
     </script>
+    <!-- The MIT License (MIT) Copyright (c) 2015 Lokesh Dhakar -->
 </body>
 </html>
