@@ -535,6 +535,11 @@ body {
     display: none;
 }
 
+/* slick-dots の各要素 (li要素) */
+.slick-dots li {
+    width: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .title_gallery {
     text-align: center;
